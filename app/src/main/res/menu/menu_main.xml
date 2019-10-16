@@ -43,5 +43,16 @@
         android:orderInCategory="111"
         app:showAsAction="never"
         android:id="@+id/me_sensores"
-        android:title="Sensores" />
+        android:title="Sensores" >
+        <menu>
+            <item
+                android:id="@+id/me_Touch"
+                android:title="Touchtl"/>
+            <item
+                android:id="@+id/me_Prox"
+                android:title="Proximidad"/>
+
+        </menu>
+    </item>
+
 </menu>

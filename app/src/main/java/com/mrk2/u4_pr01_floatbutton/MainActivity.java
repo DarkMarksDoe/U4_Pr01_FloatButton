@@ -63,8 +63,11 @@ public class MainActivity extends AppCompatActivity {
             }else if(id == R.id.me_img_camera) {
                 Intent intentVid = new Intent(MainActivity.this, ActivityCamera.class);
                 startActivity(intentVid);
-            }else if(id == R.id.me_sensores) {
+            }else if(id == R.id.me_Touch) {
                 Intent intentVid = new Intent(MainActivity.this, ActivityTapSensor.class);
+                startActivity(intentVid);
+            }else if(id == R.id.me_Prox) {
+                Intent intentVid = new Intent(MainActivity.this, ActivityProx.class);
                 startActivity(intentVid);
             }
 
