@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">U4_Pr01_FloatButton</string>
+    <string name="action_settings">Settings</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="evento">Evento</string>
+    <string name="x">X: </string>
+    <string name="y">Y: </string>
+    <string name="z">Z: </string>
+</resources>

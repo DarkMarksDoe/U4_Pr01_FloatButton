@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mrk2.u4_pr01_floatbutton.MainActivity">
+    <item
+        android:id="@+id/action_reproducir"
+        android:orderInCategory="100"
+        android:title="Reproductor"
+        app:showAsAction="never" >
+        <menu>
+            <item
+                android:id="@+id/me_audio"
+                android:title="play audio"/>
+            <item
+                android:id="@+id/me_song"
+                android:title="play song"/>
+            <item
+                android:id="@+id/me_video"
+                android:title="play video"/>
+            <item
+                android:id="@+id/me_videoView"
+                android:title="play videoView"/>
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/action_imagenes"
+        android:orderInCategory="100"
+        android:title="Galery"
+        app:showAsAction="never">
+        <menu>
+
+            <item
+                android:id="@+id/me_img_galery"
+                android:title="Galery"/>
+            <item
+                android:id="@+id/me_img_camera"
+                android:title="Camera"/>
+
+        </menu>
+    </item>
+    <item
+        android:orderInCategory="111"
+        app:showAsAction="never"
+        android:id="@+id/me_sensores"
+        android:title="Sensores" />
+</menu>
