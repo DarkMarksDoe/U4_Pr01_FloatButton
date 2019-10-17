@@ -51,7 +51,17 @@
             <item
                 android:id="@+id/me_Prox"
                 android:title="Proximidad"/>
-
+        </menu>
+    </item>
+    <item
+        android:orderInCategory="111"
+        app:showAsAction="never"
+        android:id="@+id/me_location"
+        android:title="Maps" >
+        <menu>
+            <item
+                android:id="@+id/me_map1"
+                android:title="My coordenates"/>
         </menu>
     </item>
 

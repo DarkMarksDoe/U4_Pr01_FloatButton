@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
             }else if(id == R.id.me_Prox) {
                 Intent intentVid = new Intent(MainActivity.this, ActivityProx.class);
                 startActivity(intentVid);
+            }else if(id == R.id.me_map1) {
+                Intent intentVid = new Intent(MainActivity.this, ActivityMap.class);
+                startActivity(intentVid);
             }
 
 

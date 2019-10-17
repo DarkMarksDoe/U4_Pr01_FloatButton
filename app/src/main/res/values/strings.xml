@@ -9,4 +9,6 @@
     <string name="y">Y: </string>
     <string name="z">Z: </string>
     <string name="textview">Mira nomas puedo ver</string>
+    <string name="location_service">Location Service</string>
+    <string name="longitud">Longitud</string>
 </resources>
