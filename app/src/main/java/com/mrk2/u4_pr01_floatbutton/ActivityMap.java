@@ -1,15 +1,19 @@
 package com.mrk2.u4_pr01_floatbutton;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.opengl.ETC1;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -43,14 +47,16 @@ public class ActivityMap extends AppCompatActivity implements LocationListener {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMap();
+                try {
+                    Intent intentMap = new Intent(ActivityMap.this,MapsActivity.class);
+                    startActivity(intentMap);
+                }catch (Exception e){
+                    Toast.makeText(ActivityMap.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
-
-    private void openMap() {
-    }
-
     private void getMyCordinates() {
         if(getGPStatus()){
             pb.setVisibility(View.VISIBLE);
@@ -62,9 +68,21 @@ public class ActivityMap extends AppCompatActivity implements LocationListener {
                 return;
             }
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,time,minDist,(LocationListener)this);
+
         }else{
             pb.setVisibility(View.INVISIBLE);
-            Toast.makeText(this, "Activa el GPS porfi", Toast.LENGTH_SHORT).show();
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("GPS Desactivated");
+            alert.setCancelable(false);
+            alert.setPositiveButton("Activate GPS", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                }
+            });
+            alert.setNegativeButton("Cancel",null);
+            alert.create().show();
         }
     }
 
@@ -85,8 +103,13 @@ public class ActivityMap extends AppCompatActivity implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-
+    etLong.setText("");
+    etLat.setText("");
+        pb.setVisibility(View.INVISIBLE);
+        etLong.setText(String.valueOf(location.getLongitude()));
+        etLat.setText(String.valueOf(location.getLatitude()));
     }
+
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {

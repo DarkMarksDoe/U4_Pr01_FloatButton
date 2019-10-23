@@ -20,6 +20,9 @@
             <item
                 android:id="@+id/me_videoView"
                 android:title="play videoView"/>
+            <item
+                android:id="@+id/me_thingsPlayer"
+                android:title="Reproduce"/>
         </menu>
 
     </item>

@@ -11,4 +11,5 @@
     <string name="textview">Mira nomas puedo ver</string>
     <string name="location_service">Location Service</string>
     <string name="longitud">Longitud</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
