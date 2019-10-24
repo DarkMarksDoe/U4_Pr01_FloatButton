@@ -75,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
             }else if(id == R.id.me_thingsPlayer) {
                 Intent intentVid = new Intent(MainActivity.this, ActivityThingsPlayer.class);
                 startActivity(intentVid);
+            }else if(id == R.id.me_player_mp3) {
+                Intent intentVid = new Intent(MainActivity.this, Activity_Music_Player.class);
+                startActivity(intentVid);
             }
-
 
             }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

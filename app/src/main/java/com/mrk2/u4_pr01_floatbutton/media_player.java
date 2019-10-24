@@ -24,7 +24,6 @@ public class media_player extends AppCompatActivity {
         setContentView(R.layout.activity_media_player);
         try {
             medPlay = MediaPlayer.create(getApplicationContext(),R.raw.a1);
-
             cargarControles();
             cargarEventos();
         }catch (Exception e){

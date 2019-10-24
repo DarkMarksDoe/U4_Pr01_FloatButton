@@ -67,5 +67,15 @@
                 android:title="My coordenates"/>
         </menu>
     </item>
-
+    <item
+        android:orderInCategory="111"
+        app:showAsAction="never"
+        android:id="@+id/me_player"
+        android:title="Player" >
+        <menu>
+            <item
+                android:id="@+id/me_player_mp3"
+                android:title="Music Player"/>
+        </menu>
+    </item>
 </menu>
