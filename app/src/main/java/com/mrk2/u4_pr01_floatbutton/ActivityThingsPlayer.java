@@ -79,8 +79,8 @@ public class ActivityThingsPlayer extends AppCompatActivity {
 
     private void previousThing() {
         i--;
-        if(i==imageList.length){
-            i = 0;
+        if(i<0){
+            i = imageList.length-1;
         }
         showImage();
     }
